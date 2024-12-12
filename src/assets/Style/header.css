@@ -1,0 +1,16 @@
+.header{
+background-color: white;
+padding:0;
+width:100%;
+position: fixed;
+top:0;
+box-shadow: 10px 10px 10px whitesmoke;
+}
+.header ul{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.header ul li{
+  list-style-type: none;
+}
