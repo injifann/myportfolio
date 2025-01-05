@@ -14,3 +14,45 @@ box-shadow: 10px 10px 10px whitesmoke;
 .header ul li{
   list-style-type: none;
 }
+.portfolio-container{
+  display:flex;
+  justify-content: space-between;
+}
+.menu-btn-container{
+  width: 50px;
+  height: 40px;
+  border:1px solid blue;
+  border-radius:5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-btn{
+  width: 30px;
+  background-color: rgba(0, 0, 0, 0.61);
+  height: 3px;
+  position: relative;
+}
+.menu-btn::after,.menu-btn::before{
+  content:"";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.61);
+}
+.menu-btn::after{
+  top:-8px;
+  left: 0;
+}
+.menu-btn::before{
+  bottom:-8px;
+  left: 0;
+}
+
+/*  */
+@media (max-width:480px) {
+  .header ul{
+    flex-direction:column;
+  }
+  
+}
