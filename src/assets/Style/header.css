@@ -1,58 +1,126 @@
-.header{
-background-color: white;
-padding:0;
-width:100%;
-position: fixed;
-top:0;
-box-shadow: 10px 10px 10px whitesmoke;
-}
-.header ul{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-.header ul li{
-  list-style-type: none;
-}
-.portfolio-container{
-  display:flex;
-  justify-content: space-between;
-}
-.menu-btn-container{
-  width: 50px;
-  height: 40px;
-  border:1px solid blue;
-  border-radius:5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu-btn{
-  width: 30px;
-  background-color: rgba(0, 0, 0, 0.61);
-  height: 3px;
-  position: relative;
-}
-.menu-btn::after,.menu-btn::before{
-  content:"";
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.61);
-}
-.menu-btn::after{
-  top:-8px;
-  left: 0;
-}
-.menu-btn::before{
-  bottom:-8px;
-  left: 0;
-}
+/* 
+styling header element.
+ general style
+ */
 
-/*  */
-@media (max-width:480px) {
+  .header{
+  background-color: white;
+  width:100%;
+  top:0;
+  box-shadow: 10px 10px 10px whitesmoke;
+  flex-direction: column;
+  }
+  .header nav{
+    display:flex;
+  }
   .header ul{
-    flex-direction:column;
+    display: flex;
+    width: 100%;
+    align-items:flex-start;
+    justify-content:space-between;
   }
   
+  .portfolio-container{
+    display:flex;
+    justify-content: space-between;
+  }
+
+  .portfolio-container p{
+    font-size: 2rem;
+    font-weight: bold;;
+  }
+
+
+/* style of header elements on small and medium devixe */
+
+@media (max-width:991px)
+ {
+  .header nav{
+    flex-direction: column;
+  }
+  .header ul{
+    flex-direction:column;
+    padding:0 1.5rem 1.5rem;
+    height: 80vh;
+  }
+  /* 
+  styling div that contains portifolio logo and menu btn 
+*/
+  .portfolio-container
+  {
+    padding: 1.5rem;
+  }
+  .menu-btn-container{
+    width: 50px;
+    height: 40px;
+    border:1px solid blue;
+    border-radius:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-btn
+  {
+    width: 30px;
+    background-color: rgba(0, 0, 0, 0.61);
+    height: 3px;
+    position: relative;
+  }
+
+  .menu-btn::after,.menu-btn::before
+  {
+    content:"";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.61);
+  }
+
+  .menu-btn::after
+  {
+    top:-8px;
+    left: 0;
+  }
+
+  .menu-btn::before
+  {
+    bottom:-8px;
+    left: 0;
+  }
+  
+}
+
+/* navigation list style on large device 
+
+   remove menu btn 
+   change navigation flex-direction to row
+
+*/
+
+@media (min-width:992px){
+  
+  .header nav{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .header ul{
+    height:80px;
+    width: 70%; 
+    align-items: center;
+ }
+
+  .menu-btn-container
+  {
+    display:none;
+  }
+  nav
+  {
+  flex-direction:row;
+  }
+  
+  .portfolio-container p{
+    align-self: center;
+  };
+
 }

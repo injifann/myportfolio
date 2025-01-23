@@ -6,13 +6,14 @@ function Header()
     <header className='header'>
       
       <nav>
-      <div className='portfolio-container'>
-          <p>MY PORTIFOLIO</p>
-          <div className="menu-btn-container">
-              <div className="menu-btn">
-              </div>
-          </div>
-      </div>
+        <div className='portfolio-container'>
+            <p>MY PORTIFOLIO</p>
+            <div className="menu-btn-container">
+                <div className="menu-btn">
+                </div>
+            </div>
+        </div>
+
         <ul>
           <li><a href="">Home</a></li>
           <li><a href="">Projects</a></li>
@@ -23,6 +24,7 @@ function Header()
           <li><a href="">ContactMe</a></li>
         </ul>
       </nav>
+
     </header>
   )
 }
