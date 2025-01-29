@@ -1,0 +1,56 @@
+
+.skill{
+  display: grid;
+  grid-template-columns:1fr;
+  position:relative;
+  padding-top:80px;
+}
+
+.container{
+  display:flex;
+  flex-direction:column;
+  padding-inline:20px;
+  margin-top: 20px;
+}
+
+h3{
+  align-self:flex-start;
+  padding:10px 0px;
+  color: var(--CARDHEADERCOLOR);;
+}
+
+.progress-bar{
+  border-radius: 10px;
+  box-shadow:5px 2px 2px rgba(0, 0, 0, 0.381);
+  position:relative;
+  height: 10px;
+  width: 100%;
+  background-color: var(--SKILLBG);
+}
+
+.skill-and-percent{
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-bar div{
+  height: 100%;
+  background-color: var(--SKILLCOLOR);
+  border-radius: 10px;
+
+}
+
+/* skill style for different media */
+@media (max-width:480px)
+{
+  
+
+}
+
+@media (min-width:481px)
+{
+  .skill{
+    grid-template-columns: 1fr 1fr;
+  }
+  
+}

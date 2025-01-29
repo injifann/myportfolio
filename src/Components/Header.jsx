@@ -1,28 +1,68 @@
 import '../assets/Style/header.css'
+import {useState} from 'react'
+
+import  {useTheme}  from '../ThemeContext.jsx'
+import { Link } from 'react-router-dom';
 function Header()
 {
+const [isMenuVisible ,setMenuVisibility]=useState(true);
+const { theme, toggleTheme } = useTheme()
 
+
+const toggleMenu=()=>{
+  setMenuVisibility(!isMenuVisible);
+}
   return (
     <header className='header'>
       
       <nav>
         <div className='portfolio-container'>
             <p>MY PORTIFOLIO</p>
-            <div className="menu-btn-container">
+            <div className="menu-btn-container" onClick={toggleMenu}>
                 <div className="menu-btn">
                 </div>
             </div>
         </div>
 
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">Service</a></li>
-          <li><a href="">About Me</a></li>
-          <li><a href="">Certificates</a></li>
-          <li><a href="">Testimonals</a></li>
-          <li><a href="">ContactMe</a></li>
-        </ul>
+        { isMenuVisible&& (
+          <ul>
+
+
+
+
+
+      <li>
+      <Link to="/">Home</Link>
+      </li>
+      <li>
+       <Link to="/projects">Projects</Link>
+       </li>
+
+
+       <li>
+       <Link to="/service">Service</Link>
+      
+       </li>
+
+       <li>
+      <Link to="/skills">Skills</Link>
+      </li>
+      <li>
+      <Link to="/testimonials">Testimonials</Link>
+      </li>
+
+      <li>
+      <Link to="/about-me">AboutMe</Link>
+      </li>
+      <li>
+      <Link to="/contact-me">ContactMe</Link>
+      </li>
+          <button onClick={toggleTheme}>
+         {theme === 'light' ? 'Dark' : 'Light'} Theme
+      </button>
+        </ul>)
+
+        }
       </nav>
 
     </header>

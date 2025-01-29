@@ -1,9 +1,14 @@
 
 function ServiceCard(props)
 {
-return <div>
-  <h2>{props.title}</h2>
-  <img src="" alt="" />
+return <div className="service-card">
+  <h3>{props.title}</h3>
+  <hr/>
+<p>
+{
+  props.desc
+}</p>
 </div>
+
 }
 export default ServiceCard;

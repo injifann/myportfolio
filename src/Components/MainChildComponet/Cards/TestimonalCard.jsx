@@ -1,14 +1,17 @@
 
+import '../../../assets/Style/testimonal.css'
+
 function TestimonalCard(props)
 {
-  return <div>
-    <h4>{props.cleintname}</h4>
+  return <div className="card">
+     <img src={props.image} alt="" />
+    <h4>{props.clientname}</h4>
+   
     <p>
      {props.testimonal}
 
     </p>
 
-    <img src="" alt="" />
   </div>
 
 }

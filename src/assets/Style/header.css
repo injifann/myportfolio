@@ -2,13 +2,14 @@
 styling header element.
  general style
  */
-
   .header{
-  background-color: white;
+  background-color:inherit;
   width:100%;
   top:0;
-  box-shadow: 10px 10px 10px whitesmoke;
+  box-shadow: 10px 10px 10px var(--SHADOW);
   flex-direction: column;
+  border-bottom: 2px solid #007BFF;
+
   }
   .header nav{
     display:flex;
@@ -26,12 +27,41 @@ styling header element.
   }
 
   .portfolio-container p{
-    font-size: 2rem;
-    font-weight: bold;;
+    font-size: 24px; 
+    font-weight: bold; 
+    color: blue;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    margin: 0; 
   }
 
+  nav ul li {
+    margin: 0 5px;
+  }
+  
+  nav ul li a {
+    color: var(--LINKCOLOR);
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: var(--LINKHOVERCOLOR);
+    border-radius: 5px;
+  }
 
-/* style of header elements on small and medium devixe */
+  
+/* style of header elements on small and medium device */
+@media (max-width:481px)
+{
+  .portfolio-container p{
+    font-size: 1rem;
+  }
+
+}
 
 @media (max-width:991px)
  {
@@ -63,7 +93,7 @@ styling header element.
   .menu-btn
   {
     width: 30px;
-    background-color: rgba(0, 0, 0, 0.61);
+    background-color: var( --TEXTCOLOR);
     height: 3px;
     position: relative;
   }
@@ -74,7 +104,7 @@ styling header element.
     height: 100%;
     width: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.61);
+    background-color: var( --TEXTCOLOR);
   }
 
   .menu-btn::after
