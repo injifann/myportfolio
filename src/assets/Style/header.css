@@ -21,12 +21,12 @@ styling header element.
     justify-content:space-between;
   }
   
-  .portfolio-container{
+  .name-container{
     display:flex;
     justify-content: space-between;
   }
 
-  .portfolio-container p{
+  .name-container p{
     font-size: 24px; 
     font-weight: bold; 
     color: blue;
@@ -57,7 +57,7 @@ styling header element.
 /* style of header elements on small and medium device */
 @media (max-width:481px)
 {
-  .portfolio-container p{
+  .name-container p{
     font-size: 1rem;
   }
 
@@ -76,7 +76,7 @@ styling header element.
   /* 
   styling div that contains portifolio logo and menu btn 
 */
-  .portfolio-container
+  .name-container
   {
     padding: 1.5rem;
   }
@@ -149,7 +149,7 @@ styling header element.
   flex-direction:row;
   }
   
-  .portfolio-container p{
+  .name-container p{
     align-self: center;
   };
 

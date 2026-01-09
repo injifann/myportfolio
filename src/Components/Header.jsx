@@ -16,8 +16,10 @@ const toggleMenu=()=>{
     <header className='header'>
       
       <nav>
-        <div className='portfolio-container'>
-            <p>MY PORTIFOLIO</p>
+        <div className='name-container'>
+            <p>
+              <Link to="/">Kabe</Link>
+              </p>
             <div className="menu-btn-container" onClick={toggleMenu}>
                 <div className="menu-btn">
                 </div>
@@ -30,10 +32,6 @@ const toggleMenu=()=>{
 
 
 
-
-      <li>
-      <Link to="/">Home</Link>
-      </li>
       <li>
        <Link to="/projects">Projects</Link>
        </li>
