@@ -11,7 +11,7 @@ import p4 from '../../../assets/Images/js_documantation.png'
 
 function Projects() {
 
-  const projects=[{title:"Survey form",image:p1},{title:"tribulate page",image:p2},{title:"product landing page",image:p3},{title:"js documentation",image:p4}]
+  const projects=[{title:"Survey form",image:p1,name :"my mobile phone delivery app"},{title:"tribulate page",image:p2,name :"my mobile phone delivery app"},{title:"product landing page",image:p3,name :"my mobile phone delivery app"},{title:"js documentation",image:p4,name :"my mobile phone delivery app"}]
 
   const [repos, setRepos] = useState([]);
 
@@ -48,7 +48,7 @@ function Projects() {
         transition={{ duration: 0.5 }}
         viewport={{ once: false }}
       >
-        <ProjectCard title={project.title} image={project.image} />
+        <ProjectCard title={project.title} image={project.image} projectName={project.name} />
       </motion.div>)
        }
      
