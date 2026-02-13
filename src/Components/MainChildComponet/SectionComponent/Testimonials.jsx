@@ -25,7 +25,6 @@ function Testimonials() {
         "I had the pleasure of working with Kabe on several projects at AAU, and I can confidently say he is one of the most talented frontend developers I have encountered. His expertise in React and modern JavaScript frameworks allowed us to build highly responsive and user-friendly applications that significantly improved our user engagement metrics.",
       image: testimonalpic,
     },
-    // You can add more real testimonials here later
   ];
 
   const settings = {
