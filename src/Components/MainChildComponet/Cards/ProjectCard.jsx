@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion'; // optional but nice for hover/click effects
+import { motion } from 'framer-motion'; 
 
 function ProjectCard({ image, title, projectName }) {
   const [likes, setLikes] = useState(0);

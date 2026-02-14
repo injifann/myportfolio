@@ -52,7 +52,7 @@ function ContactMe() {
         {/* Main content: left text + right form */}
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 xl:gap-16 items-center lg:items-start">
           {/* Left side – promotion text + icons */}
-          <div className="w-full lg:w-5/12 text-center lg:text-left">
+          <div className="w-full lg:w-5/12 text-center lg:text-left py-20">
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-4">
               Let's Build Something Great
             </h2>
@@ -62,7 +62,7 @@ function ContactMe() {
 
             <div className="flex justify-center lg:justify-start gap-8 md:gap-10">
               <a
-                href="https://t.me/yourusername"
+                href="https://t.me/kabe_g"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-4xl text-gray-600 dark:text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400 transition-all transform hover:scale-110"
@@ -71,7 +71,7 @@ function ContactMe() {
                 <FaTelegram />
               </a>
               <a
-                href="https://wa.me/2519xxxxxxxx"
+                href="https://wa.me/qr/ZDY5VV65IQURG1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-4xl text-gray-600 dark:text-gray-400 hover:text-green-500 dark:hover:text-green-400 transition-all transform hover:scale-110"
@@ -80,7 +80,7 @@ function ContactMe() {
                 <FaWhatsapp />
               </a>
               <a
-                href="mailto:kabegutema36@gmail.com"
+                href="mailto:kabegutema4@gmail.com"
                 className="text-4xl text-gray-600 dark:text-gray-400 hover:text-red-500 dark:hover:text-red-400 transition-all transform hover:scale-110"
                 aria-label="Email"
               >
@@ -104,7 +104,7 @@ function ContactMe() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     onFocus={() => setErrors((prev) => ({ ...prev, name: '' }))}
-                    className={`w-full px-4 py-3 rounded-lg border ${
+                    className={`w-full px-3 py-2 rounded-lg border ${
                       errors.name ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
                     } bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 transition-all`}
                     placeholder="John Doe"
@@ -123,7 +123,7 @@ function ContactMe() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     onFocus={() => setErrors((prev) => ({ ...prev, email: '' }))}
-                    className={`w-full px-4 py-3 rounded-lg border ${
+                    className={`w-full px-3 py-2 rounded-lg border ${
                       errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
                     } bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 transition-all`}
                     placeholder="example@email.com"
@@ -141,7 +141,7 @@ function ContactMe() {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     onFocus={() => setErrors((prev) => ({ ...prev, message: '' }))}
-                    rows={5}
+                    rows={3}
                     maxLength={500}
                     className={`w-full px-4 py-3 rounded-lg border ${
                       errors.message ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
@@ -150,14 +150,14 @@ function ContactMe() {
                   />
                   <div className="flex justify-between mt-2 text-sm text-gray-500 dark:text-gray-400">
                     {errors.message && <p className="text-red-600 dark:text-red-400">{errors.message}</p>}
-                    <p className="ml-auto">{message.length}/500</p>
+                    <p className="ml-auto py-1">{message.length}/500</p>
                   </div>
                 </div>
 
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="w-full py-3.5 bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 mt-3"
+                  className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 mt-3"
                 >
                   Send Message
                 </button>

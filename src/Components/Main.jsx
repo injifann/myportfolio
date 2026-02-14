@@ -5,17 +5,22 @@ import AboutMe from "./MainChildComponet/SectionComponent/AboutMe.jsx";
 import Testimonials from "./MainChildComponet/SectionComponent/Testimonials.jsx";
 import Home from "./MainChildComponet/SectionComponent/Home.jsx";
 import Skill from "./MainChildComponet/SectionComponent/Skill.jsx";
+import Pricing from "./MainChildComponet/SectionComponent/Pricing.jsx";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+function LandingPage()
+ { return ( <> <Home /> <Projects /> <Service /> <Skill /> <Testimonials /> <AboutMe /> <ContactMe /> </> ); }
 
 
 function Main() {
   return (
     <Routes>
-    <Route path="/" element={<><Home /> <Projects />  <Service />  <Skill /> <Testimonials /> <AboutMe />  <ContactMe /> </>} />
+    <Route path="/" element={<LandingPage />} />
     <Route path="/projects" element={<Projects /> } />
     <Route path="/service" element={<Service />} />
     <Route path="/skills" element={<Skill />} />
     <Route path="/testimonials" element={<Testimonials />} />
+    <Route path="/pricing" element={<Pricing />} />
     <Route path="/about-me" element={<AboutMe />} />
     <Route path="/contact-me" element={<ContactMe />} />
   </Routes>

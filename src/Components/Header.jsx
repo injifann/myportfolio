@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useTheme } from '../ThemeContext.jsx';
 
 function Header() {
@@ -8,6 +8,22 @@ function Header() {
   const [activeSection, setActiveSection] = useState('');
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    // just smooth-scroll to top
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Navigate to home then ensure top scroll shortly after
+      navigate('/');
+      setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 50);
+    }
+    setIsMenuOpen(false);
+  };
 
   useEffect(() => {
     // Function to find the most visible section
@@ -25,14 +41,14 @@ function Header() {
       setActiveSection(current || 'home');
     };
 
-    // Run once on mount (important for initial load)
+    // Run once on mount 
     updateActiveSection();
 
     // Observe scroll
     window.addEventListener('scroll', updateActiveSection);
     window.addEventListener('resize', updateActiveSection);
 
-    // Optional: IntersectionObserver fallback/enhancement
+    //  IntersectionObserver fallback/enhancement
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -76,16 +92,36 @@ function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
+
           <div className="flex-shrink-0">
             <Link
               to="/"
-              className={`text-2xl font-bold transition-colors ${
-                isActive('/') 
-                  ? 'text-indigo-600 dark:text-indigo-400 underline underline-offset-4 decoration-indigo-600 dark:decoration-indigo-400'
-                  : 'text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400'
+              onClick={handleLogoClick}
+              className={`inline-flex items-center gap-3 transform transition-all duration-300 group ${
+                isActive('/') ? 'scale-105' : 'hover:scale-105'
               }`}
+              aria-label="Homepage"
             >
-              Kabe
+              <span
+                className={`w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 shadow-md transition-shadow duration-300 ${
+                  isActive('/') ? 'ring-2 ring-indigo-300' : ''
+                }`}
+              >
+                <svg className="w-6 h-6 -ml-0.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M6 17L12 7l6 10" stroke="white" />
+                </svg>
+              </span>
+
+              <span className="flex flex-col leading-tight">
+                <span
+                  className={`text-lg sm:text-2xl font-extrabold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-500 transition-colors duration-300 ${
+                    isActive('/') ? 'underline underline-offset-4 decoration-indigo-600 dark:decoration-indigo-400' : 'dark:text-white'
+                  }`}
+                >
+                  Kabe
+                </span>
+                <span className="text-xs text-gray-500 dark:text-gray-400 -mt-0.5">Full Stack Developer</span>
+              </span>
             </Link>
           </div>
 

@@ -1,4 +1,5 @@
 import homepic from '../../../assets/Images/homepicture.jpg';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -50,12 +51,14 @@ export default function Home() {
             >
               View My Projects
             </a>
+            <Link to="/pricing">
             <a
               href="#contact-me"
               className="inline-flex items-center justify-center px-7 py-3.5 bg-transparent border-2 border-gray-700 dark:border-gray-300 text-gray-800 dark:text-gray-200 font-semibold rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 hover:shadow-lg text-base"
             >
               Get in Touch
             </a>
+            </Link>
           </div>
         </div>
       </div>

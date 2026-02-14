@@ -1,21 +1,23 @@
 import ServiceCard from "../Cards/ServiceCard"; 
 import { motion } from 'framer-motion'; 
+import { Link } from 'react-router-dom';
+
 
 function Service() {
   const services = [
     {
       title: "Frontend Development",
-      desc: "Building modern, responsive, and interactive user interfaces using React, Tailwind CSS, JavaScript/TypeScript, Next.js, and best UI/UX practices. Pixel-perfect designs that work flawlessly on mobile, tablet, and desktop.",
+      desc: "Building modern, responsive, and interactive user interfaces using React, Tailwind CSS, JavaScript, and best UI/UX practices. Pixel-perfect designs that work flawlessly on mobile, tablet, and desktop.",
       icon: "🎨",
     },
     {
       title: "Backend Development",
-      desc: "Creating secure, scalable, and high-performance server-side applications with Laravel, PHP, Node.js, RESTful/GraphQL APIs, database design (MySQL/PostgreSQL), authentication, and business logic implementation.",
+      desc: "Creating secure, scalable, and high-performance server-side applications with Laravel, PHP, database design (MySQL/PostgreSQL), authentication, and business logic implementation.",
       icon: "⚙️",
     },
     {
       title: "Full-Stack Solutions",
-      desc: "End-to-end web application development — combining beautiful frontends with robust, efficient backends, including deployment, CI/CD pipelines, and cloud integration (Vercel, Railway, AWS, etc.).",
+      desc: "End-to-end web application development — combining beautiful frontends with robust, efficient backends, including deployment, CI/CD pipelines, and cloud integration (Vercel, Railway, AWS).",
       icon: "🌐",
     },
     {
@@ -72,6 +74,7 @@ function Service() {
         </div>
 
         <div className="text-center mt-16">
+          <Link to="/pricing">
           <a
             href="#contact-me"
             className="inline-flex items-center gap-3 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white font-semibold rounded-full shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all duration-300 transform hover:-translate-y-1"
@@ -81,6 +84,7 @@ function Service() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
+          </Link>
         </div>
       </div>
     </section>
