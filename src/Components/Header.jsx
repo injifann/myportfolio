@@ -5,6 +5,8 @@ import { useTheme } from '../ThemeContext.jsx';
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  console.log('Theme from context:', theme);          // ← add this
+console.log('toggleTheme exists?', !!toggleTheme);
   const [activeSection, setActiveSection] = useState('');
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);

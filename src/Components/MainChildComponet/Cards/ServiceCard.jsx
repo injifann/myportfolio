@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ServiceCard({ title, desc, icon }) {
+function ServiceCard({ title, desc, icon}) {
   return (
     <div className="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-indigo-500/20 dark:hover:shadow-indigo-900/30 border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 transform hover:-translate-y-2">
       {/* Icon / Top accent */}

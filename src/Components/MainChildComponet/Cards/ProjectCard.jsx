@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion'; 
 
-function ProjectCard({ image, title, projectName }) {
+function ProjectCard({ image, title, projectName,technology }) {
   const [likes, setLikes] = useState(0);
 
   const handleLike = () => setLikes((prev) => prev + 1);
@@ -39,7 +39,7 @@ function ProjectCard({ image, title, projectName }) {
 
         {/* Tech stack tags */}
         <div className="flex flex-wrap gap-2">
-          {['React', 'JavaScript', 'Tailwind CSS', 'HTML5'].map((tech, idx) => (
+          {technology.map((tech, idx) => (
             <span
               key={idx}
               className="px-3 py-1 text-xs font-medium rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-300"

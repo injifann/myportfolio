@@ -6,13 +6,16 @@ import p1 from '../../../assets/Images/surveyform.png';
 import p2 from '../../../assets/Images/tribulatepage.png';
 import p3 from '../../../assets/Images/productlanding.png';
 import p4 from '../../../assets/Images/js_documantation.png';
+import pr5 from '../../../assets/Images/pricecomparator.png';
 
 function Projects() {
   const projects = [
-    { title: "Survey Form", image: p1, name: "Survey form project" },
-    { title: "Tribulate Page", image: p2, name: "Tribulate landing page" },
-    { title: "Product Landing Page", image: p3, name: "Product showcase" },
-    { title: "JS Documentation", image: p4, name: "JavaScript documentation page" },
+    { title: "Subscription Comparator", image: pr5, name: "Price comparison tool",technology: ["React", "JavaScript", "Tailwind CSS"] },
+    { title: "Survey Form", image: p1, name: "Survey form project",technology: ["HTML5", "CSS3", "JavaScript"] },
+    { title: "Tribulate Page", image: p2, name: "Tribulate landing page",technology: ["HTML", "CSS"] },
+    { title: "Product Landing Page", image: p3, name: "Product showcase",technology: ["HTML5", "CSS3"] },
+    { title: "JS Documentation", image: p4, name: "JavaScript documentation page",technology: ["HTML5", "CSS3"] },
+
   ];
 
   const [repos, setRepos] = useState([]);
@@ -81,6 +84,8 @@ function Projects() {
                 title={project.title}
                 image={project.image}
                 projectName={project.name}
+                technology={project.technology}
+
               />
             </motion.div>
           ))}
