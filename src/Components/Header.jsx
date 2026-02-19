@@ -6,7 +6,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   console.log('Theme from context:', theme);          // ← add this
-console.log('toggleTheme exists?', !!toggleTheme);
+  console.log('toggleTheme exists?', !!toggleTheme);
   const [activeSection, setActiveSection] = useState('');
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -136,6 +136,7 @@ console.log('toggleTheme exists?', !!toggleTheme);
               { to: '/testimonials', label: 'Testimonials' },
               { to: '/about-me', label: 'About Me' },
               { to: '/contact-me', label: 'Contact' },
+              { to: '/blog', label: 'Blogs' },
             ].map(({ to, label }) => (
               <Link
                 key={to}

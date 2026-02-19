@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion'; 
+import {Link} from 'react-router-dom'
 
-function ProjectCard({ image, title, projectName,technology }) {
+function ProjectCard({ image, title, projectName,technology,link,srcode }) {
   const [likes, setLikes] = useState(0);
 
   const handleLike = () => setLikes((prev) => prev + 1);
@@ -54,7 +55,7 @@ function ProjectCard({ image, title, projectName,technology }) {
           {/* Demo & Code buttons */}
           <div className="flex gap-3">
             <a
-              href="#"
+              href={link}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm hover:shadow-md"
@@ -64,9 +65,8 @@ function ProjectCard({ image, title, projectName,technology }) {
               </svg>
               Live Demo
             </a>
-
             <a
-              href="#"
+              href={srcode}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-lg transition-colors"
@@ -77,7 +77,7 @@ function ProjectCard({ image, title, projectName,technology }) {
               </svg>
               Source Code
             </a>
-          </div>
+        </div>
 
           {/* Like / Dislike */}
           <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">

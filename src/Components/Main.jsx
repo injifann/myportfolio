@@ -6,6 +6,7 @@ import Testimonials from "./MainChildComponet/SectionComponent/Testimonials.jsx"
 import Home from "./MainChildComponet/SectionComponent/Home.jsx";
 import Skill from "./MainChildComponet/SectionComponent/Skill.jsx";
 import Pricing from "./MainChildComponet/SectionComponent/Pricing.jsx";
+import Blog from "./MainChildComponet/SectionComponent/Blog.jsx";
 
 // Removed: import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // Keep only what you actually use:
@@ -36,6 +37,8 @@ function Main() {
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/about-me" element={<AboutMe />} />
       <Route path="/contact-me" element={<ContactMe />} />
+      <Route path="/blog" element ={<Blog/>}/>
+
     </Routes>
   );
 }
